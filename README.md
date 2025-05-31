@@ -1,4 +1,7 @@
 # NomiKin-Discord Integration
+> [!TIP]
+> This is a forked bracnch of d3tour's original Nomkin-Discord. The purpose of this branch is to expand the Nomi Message Limits and provide the ability to customize what your Nomi says if someone sends them a message that is too long.
+> Most of this project is d3tour's hard work. I simply updated a few little pieces. Huge thanks to d3tour for the awesome integration!!
 
 > [!TIP]
 > This is a fun side project maintained by one guy in his spare time. If you run into a bug, please open an issue on this repo. If you have trouble getting things up and running, support is limited, but available on Discord (try and find d3tour in the Nomi or Kindroid Discord server). If there's a feature you'd like to see included in a future release, open an issue on this repo and request it.
@@ -28,7 +31,7 @@ You can run a Discord integration for as many Nomis and Kins in one instance of 
       1. Copy the generated URL at the bottom and open it in a web browser to add the bot to your Discord server
 1. Install Git if you haven't already got it: [Instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 1. Install Docker if you haven't already got it: [Instructions](https://docs.docker.com/engine/install/)
-1. Clone this repo: `git clone https://github.com/d3tourrr/NomiKin-Discord.git`
+1. Clone this repo: `git clone -b message-update https://github.com/cydonia1978/NomiKin-Discord.git`
    1. After cloning the repo, change to the directory: `cd NomiKin-Discord`
 1. Get your platform API token and companion ID
    * **FOR NOMI**
@@ -82,6 +85,7 @@ You can run a Discord integration for as many Nomis and Kins in one instance of 
 | `KIN_NSFW_FILTER` | Boolean | `TRUE` | `TRUE` or `FALSE` only. Whether or not your Kindroid will filter out NSFW content in `ROOMS` mode. This is recommended for public servers. |
 | `MESSAGE_PREFIX` | String | `*Discord Message from {{USERNAME}}:*` | Text that gets appended to every message that is sent to your companion. This is super helpful if you're not the only one communicating with your companion (like if they're in a server with other people, not just you), so they can tell who's sending a message. The `{{USERNAME}}` keyword is a variable you can move around, and is replaced with a message sender's username when a message goes to your companion. If you don't include the `{{USERNAME}}` variable, then your companion will have no way of telling who sent them a message, and will assume they all came from you. See [Interacting With Your Companion](#interacting-in-discord-with-your-companion) section below. |
 | `REPLY_PREFIX` | String | `*Discord Message from {{USERNAME}}, replying to {{REPLY_TO}}:*` | Similar to `MESSAGE_PREFIX`, but used when the incoming message is a reply to another message. If a message isn't a reply, or if `REPLY_PREFIX` is not specified, the `MESSAGE_PREFIX` will be used. `REPLY_PREFIX` supports the `{{USERNAME}}` variable, and another called `{{REPLY_TO}}` which becomes the username of the author of the message that's being replied to.
+| `TOO_LONG_MESSAGE` | String | `I think I zoned out.. haha! Could you send a shorter message next time? Thanks!` | Used if someone sends too long of a message to your Nomi and they auto-respond. They will not know they sent this message, but it will affect how others react to them not receiving the original message.
 | `RESPOND_TO_PING` | Boolean | `TRUE` | `TRUE` or `FALSE` only. Whether or not your companion replies when they are pinged, or one of their messages is replied to. |
 | `RESPOND_TO_ROLE_PING` | Boolean | `TRUE` | `TRUE` or `FALSE` only. Whether or not your companion replies when a role they have is pinged, but not directly. This includes `@everyone` pings. |
 | `RESPOND_TO_DIRECT_MESSAGE` | Boolean | `TRUE` | `TRUE` or `FALSE` only. Whether or not your companion replies to Direct Messages. Does not work in Nomi Rooms mode. |
