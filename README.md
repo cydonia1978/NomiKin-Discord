@@ -1,6 +1,6 @@
 # NomiKin-Discord Integration
 > [!TIP]
-> This is a forked bracnch of d3tour's original Nomkin-Discord. The purpose of this branch is to expand the Nomi Message Limits and provide the ability to customize what your Nomi says if someone sends them a message that is too long.
+> This is a forked branch of d3tour's original Nomkin-Discord. The purpose of this branch is to expand the Nomi Message Limits and provide the ability to customize what your Nomi says if someone sends them a message that is too long.
 > Most of this project is d3tour's hard work. I simply updated a few little pieces. Huge thanks to d3tour for the awesome integration!!
 
 > [!TIP]
