@@ -10,7 +10,7 @@ import (
     "time"
 
     "github.com/bwmarrin/discordgo"
-    NomiKin "github.com/d3tourrr/NomiKinGo"
+    NomiKin "github.com/cydonia1978/NomiKinGo"
 )
 
 type Companion struct {
@@ -43,6 +43,7 @@ type Companion struct {
     NomiRoomObjects     map[string]NomiRoom
     KinRoomObjects      map[string]KinRoom
     ShowConfigEnabled bool
+    TooLongMessage  string
 }
 
 func (c *Companion) Setup(envFile string) {
@@ -119,6 +120,8 @@ func (c *Companion) Setup(envFile string) {
             c.MessagePrefix = value
         case "REPLY_PREFIX":
             c.ReplyPrefix = value
+        case "TOO_LONG_MESSAGE":
+            c.TooLongMessage = value
         case "RESPOND_TO_PING":
             c.RespondPing, err = strconv.ParseBool(value)
             if err != nil {
@@ -227,6 +230,9 @@ func (c *Companion) Setup(envFile string) {
     SuppressLogs(func() {
         c.NomiKin.Init(c.CompanionType)
     })
+
+    // copy the per-bot loaded value into the NomiKin object
+    c.NomiKin.TooLongMessage = c.TooLongMessage
 
     if c.ChatStyle == "ROOMS" {
         if c.CompanionType == "NOMI" {
