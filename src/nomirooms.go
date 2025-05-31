@@ -1,7 +1,7 @@
 package main
 
 import (
-    NomiKin "github.com/d3tourrr/NomiKinGo"
+    NomiKin "github.com/cydonia1978/NomiKinGo"
 )
 
 type Room struct {
