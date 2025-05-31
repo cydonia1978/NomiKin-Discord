@@ -1,4 +1,4 @@
-module github.com/d3tourrr/NomiKin-Discord
+module github.com/cydonia1978/NomiKin-Discord
 
 go 1.18
 
