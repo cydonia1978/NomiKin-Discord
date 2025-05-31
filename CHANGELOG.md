@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0
+* First iteration of cydonia1978's version.
+* Includes:
+  * Updated Nomi message received limits to 800 in accordance with Nomi.ai's update.
+  * `TOO_LONG_MESSAGE` Added ability for users to customize what their Nomis automatically reply if someone sends a message that is too long. This is available in the `.env` file.
+
 ## 0.9.2
 * Bugfix : Consume a newer version of `NomiKinGo` that fixes a bug where Kindroids in non-`ROOMS` mode could not respond to messages.
 
