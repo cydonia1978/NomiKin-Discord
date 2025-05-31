@@ -4,10 +4,10 @@ import (
     "github.com/bwmarrin/discordgo"
 )
 
-var Version = "v0.9.2"
+var Version = "v1.0.0"
 var RoomPrimaries = make(map[string]string)
 var Verbose = false
-var LogWidth = 5
+var LogWidth = 10
 var Companions = make(map[*discordgo.Session]*Companion)
 var Banner = `
    _  __           _ __ ___               
@@ -22,7 +22,7 @@ var Banner = `
 /_.__/\_, /  \_,_/____/\__/\___/\_,_/_/   
      /___/              __            _      _______  _________ 
     __  _______  ______/ /___  ____  (_)___ <  / __ \/__  ( __ )
- __/ /_/ ___/ / / / __  / __ \/ __ \/ / __ `/ / /_/ /  / / __  |
+ __/ /_/ ___/ / / / __  / __ \/ __ \/ / __ '/ / /_/ /  / / __  |
 /_  __/ /__/ /_/ / /_/ / /_/ / / / / / /_/ / /\__, /  / / /_/ / 
  /_/  \___/\__, /\__,_/\____/_/ /_/_/\__,_/_//____/  /_/\____/  
           /____/                          
