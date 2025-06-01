@@ -43,6 +43,10 @@ KIN_NSFW_FILTER=TRUE
 # Not used for Kindroids in ROOMS mode
 MESSAGE_PREFIX="*Discord Message from {{USERNAME}}:*"
 
+# Message length warning - Customize this if you would like to add your Nomi's voice to the message they
+# auto send if they receive a message that's too long.
+TOO_LONG_MESSAGE=I think I zoned out.. haha! Could you send a shorter message next time? Thanks!
+
 # Reply prefix - If you want the prefix added to messages that are sent in reply to other messages
 # to be different than the regular message prefix, fill this out. Otherwise leave blank/empty.
 # Ex: *{{USERNAME}} says to {{REPLY_TO}}:*
